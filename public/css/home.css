@@ -1,0 +1,39 @@
+img {
+    height: 500px;
+    width: 450px;
+    float: right;
+    opacity: 0.7;
+}
+img:hover {
+    opacity: 1;
+}
+.home{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.description{
+    width: 60%;
+    float: left;
+    word-wrap: break-word;
+    font-size: 28px;
+}
+/* .home{
+    display: flex;
+    padding: 10px;
+} */
+/* .image-box {
+    justify-content: flex-end;
+    width: 40%;
+} */
+/* .description{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    width: 60%;
+} */
+body{
+    background-color: black;
+}
