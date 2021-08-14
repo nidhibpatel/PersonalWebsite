@@ -33,7 +33,7 @@ body{
     margin: 30px;
     transform-style: preserve-3d;
     transform: perspective(1000px);
-}
+} /*card design */
 .card:before{
     content: '';
     position: absolute;
