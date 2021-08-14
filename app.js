@@ -41,6 +41,9 @@ app.get('/contact', (req, res) => {
 app.get('/aboutMe', (req, res) => {
     res.render('aboutMe')
 })
+app.get('/projects', (req, res) => {
+    res.render('projects')
+})
 app.get('/resume', (req, res) => {
     res.render('resume')
 })
@@ -69,9 +72,9 @@ var mailOptions = {
 
 transporter.sendMail(mailOptions, function(error, info){
     if(error){
-        console.log(error);
+       res.render("contact", {message: error});
     } else{
-        console.log('Email sent: ' + info.response);
+        res.render("contact", {message: 'Email sent:' + info.response});
     }
 });
 

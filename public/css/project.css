@@ -1,0 +1,139 @@
+
+body{
+    
+    background: black;
+    
+   
+}
+
+.box{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card{
+
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 210px 250px 20px;
+    grid-template-areas: "image" "text";
+    border-radius: 18px;
+    background: #1d1d1d;
+    color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .9);
+    font-family: roboto;
+    text-align: justify;
+    cursor: pointer;
+    margin: 30px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.card:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #1d1d1d; /*front of card*/
+
+}
+.card::after{
+    content: '';
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+    filter: blur(8px);
+    transform: initial;
+    z-index: -1;
+    animation: rgb 6s linear infinite;
+  }
+
+
+.card:before,
+.card.after{
+    background: linear-gradient(235deg, #1d1d1d);
+}
+
+.rgb::after {
+    content:"";
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    position: absolute;
+    inset: -3px;
+    border-radius: 16px;
+    filter: blur(8px);
+    transform: initial;
+    z-index: -1;
+    animation: rgb 6s linear infinite;
+  }
+  @keyframes card {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+.js-tilt-glare{
+    border-radius: 12x;
+}
+.card-image{
+    grid-area: image;
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("/img/trivia.png");
+    z-index: 1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+}
+.card-text{
+    grid-area: text;
+    margin: 25px;
+    z-index: 30;
+}
+.card-text p{
+    color: gray;
+    font-size: 14px;
+    font-weight: 300;
+    
+}
+.card-text h2{
+    margin-top: 0px;
+    font-size: 28px;
+}
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+}
